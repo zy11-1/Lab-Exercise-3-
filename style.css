@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.search-box { display: flex; gap: 10px; margin-bottom: 20px; }
+#cityInput { flex: 1; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px; }
+#searchBtn { padding: 10px 20px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+.error-banner { background-color: #ffe6e6; color: #d93025; padding: 10px; border-radius: 5px; margin-bottom: 20px; border-left: 5px solid #d93025; }
+
+
+.card { border: 1px solid #eee; padding: 20px; border-radius: 8px; margin-bottom: 20px; background-color: #fafafa; }
+.weather-main { display: flex; gap: 20px; font-size: 24px; font-weight: bold; margin: 15px 0; }
+.weather-details p { margin: 5px 0; color: #555; }
+.forecast-container { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; }
+.forecast-card { min-width: 90px; text-align: center; background: white; padding: 15px 10px; border: 1px solid #ddd; border-radius: 8px; }
+
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    color: transparent !important;
+    border-radius: 4px;
+    display: inline-block;
+}
