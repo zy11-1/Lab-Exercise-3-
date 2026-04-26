@@ -3,36 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 3 - WeatherNow</title>
+    <title>WeatherNow Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>WeatherNow Dashboard</h1>
+        <h1>WeatherNow</h1>
         
         <div class="search-box">
-            <input type="text" id="cityInput" placeholder="Enter city name (e.g., Kuala Lumpur)">
-            <button id="searchBtn">Search</button>
+            <input type="text" id="city-input" placeholder="Enter city name (e.g., Shanghai)">
+            <button id="search-btn">Search</button>
+        </div>
+        <div id="validation-msg" class="error-msg"></div>
+        <div id="error-banner" class="error-banner hidden">
+            <span id="error-text"></span>
+            <button id="retry-btn">Retry</button>
         </div>
 
-        <div id="errorBanner" class="error-banner" style="display: none;"></div>
+        <div id="recent-searches" class="recent-searches"></div>
 
-        <div class="current-weather card">
-            <h2 id="cityName" class="skeleton">City Name Placeholder</h2>
-            <div class="weather-main">
+        <div class="card current-weather">
+            <h2 id="city-name" class="skeleton">City Name</h2>
+            <div class="weather-info">
                 <span id="temp" class="skeleton">--°C</span>
-                <span id="desc" class="skeleton">Description</span>
+                <span id="weather-desc" class="skeleton">Description</span>
             </div>
-            <div class="weather-details">
+            <div class="details">
                 <p>Humidity: <span id="humidity" class="skeleton">--%</span></p>
-                <p>Wind: <span id="windSpeed" class="skeleton">-- km/h</span></p>
-                <p>Local Time: <span id="localTime" class="skeleton">--:--</span></p>
+                <p>Wind: <span id="wind-speed" class="skeleton">-- km/h</span></p>
+                <p>Local Time: <span id="local-time" class="skeleton">--:--</span></p>
             </div>
         </div>
 
-        <h3>7-Day Forecast</h3>
-        <div id="forecast" class="forecast-container"></div>
+        <div class="forecast-container">
+            <h3>7-Day Forecast</h3>
+            <div id="forecast-row" class="forecast-row">
+
+            </div>
+        </div>
     </div>
 
     <script src="app.js"></script>
